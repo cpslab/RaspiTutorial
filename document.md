@@ -25,16 +25,16 @@ etc.
 1. Open Python Shell
 [Menu]→[Programming]→[Python3(IDLE)]
 2. Writing a code.
-  ![shell](/RaspiTutorial/image/shell.png)
+  ![shell](./image/shell.png)
 
 ## Let's light the LED
 - Things to prepare
 bread board, 50Ω Resistor, LED, Jumper wire
   1. Connect as shown.
-  ![pin_asign](/RaspiTutorial/image/gpio.png)
+  ![pin_asign](./image/gpio.png)
   ↑Raspberry Pi3's pin assignment
   This time connect to GPIO5 and GND.
-  ![LED](/RaspiTutorial/image/LED.png)
+  ![LED](./image/LED.png)
   ※The longer of the LED's legs is + (plus).
 
   2. Open Python(IDLE) on raspberry pi. [File] → [New File]
@@ -56,27 +56,27 @@ bread board, 50Ω Resistor, LED, Jumper wire
 ## Running The Sense Hat Emulator
 1. Open Raspberry Pi Configuration
 [Menu]→[Programming]→[Sense Hat Emulator]
-![SHE](/RaspiTutorial/image/SHE.png)
+![SHE](./image/SHE.png)
 2. Open Sample Code. (about humidity.py)
 [File]→[Open example]→[Simple]→[humidity.py]
-![humidity](/RaspiTutorial/image/humidity.png)
+![humidity](./image/humidity.png)
 3. Run humidity.py
 [Run]→[Run Module] or Press the F5 key.
-![Run_module](/RaspiTutorial/image/run_module.png)
+![Run_module](./image/run_module.png)
 4. Result screen
-![SHE_result](/RaspiTutorial/image/SHE_result.png)
+![SHE_result](./image/SHE_result.png)
 By changing the value by raising or lowering the Humidity bar, how the LEDs shine also changes.
 
 ※If you want to run with the real Sense Hat, change `from sense_emu import SenseHat` on program to `from sense_hat import SenseHat`.
-![real_SHE](/RaspiTutorial/image/real_sense.JPG)
+![real_SHE](./image/real_sense.JPG)
 
 ## Obtaining values of sensor data
 As an example, let's get the value of the humidity sensor.
 1. Open Python3 IDLE
 [Menu]→[Programming]→[Python3(IDLE)]→[File]→[New File]
-![humidity2](/RaspiTutorial/image/humidity2.png)
+![humidity2](./image/humidity2.png)
 2. Writing program. And run the program with [Run]→[Run Module].
-![humidity2](/RaspiTutorial/image/humidity3.png)
+![humidity2](./image/humidity3.png)
 3. Humidity value is displayed on Shell.
 
 ※Refer to Sense Hat official document for how to get the values of other sensors, so please see.
@@ -88,15 +88,15 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
 ### Sign up ThingSpeak
 1. Open sign up page from ThingSpeak's homepage.
 <https://thingspeak.com/users/sign_up>
- ![sign_up](/RaspiTutorial/image/ThingSpeak.png)
+ ![sign_up](./image/ThingSpeak.png)
 2. Follow the instructions to create an account.
 
 ### Send sensor data to ThingSpeak.
 1. Login to ThingSpeak.
 2. Click to Channels on Menu tab. And push [New Channel] button.
- ![newchannel](/RaspiTutorial/image/new_channel.png)
+ ![newchannel](./image/new_channel.png)
 3. Open [API Keys] tab. And confirm API key.
- ![apikey](/RaspiTutorial/image/apikey.png)
+ ![apikey](./image/apikey.png)
 4. Open Python3 shell on raspberry pi and open [File] tab → [New file].
 5. Write the following code. Insert the Write API Key confirmed above into the Write_API_KEY below.
         from sense_hat import SenseHat
@@ -125,7 +125,7 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
 6. Set and save the file name.
 7. [Run]　→　[Run Module] or push F5 key.
 8. Confirm Private view on ThingSpeak.
- ![result](/RaspiTutorial/image/result.png)
+ ![result](./image/result.png)
 You can see that the current humidity is plotted.
 
 ## Work

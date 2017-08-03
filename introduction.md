@@ -20,7 +20,7 @@ Raspberry Pi is single board computer designed for education. This computer has 
 
 # Let's start Raspberry Pi
 ## Connection
-![connection](/RaspiTutorial/image/connect.jpg)
+![connection](./image/connect.jpg)
 - Connect HDMI port and display using HDMI cable.
 - Connect the mouse and keyboard to the USB port.
 - Connect the LAN cable to the LANport.
@@ -52,11 +52,11 @@ If it is expanded and displayed, it is necessary to change the resolution.
       1. Open LXTerminal on the task bar.
       2. Enter `ifconfig` and check the IP address of [inet addr] of [eth0].
       3. Open [Tera Term] on Windows. Enter the IP address in the host field and check SSH.
-        ![teraterm](/RaspiTutorial/image/teraterm1.png)
+        ![teraterm](./image/teraterm1.png)
       4. Enter user name and passphrase(default user name is "pi" and passphrase is "raspberry")
-        ![teraterm2](/RaspiTutorial/image/teraterm2.png)
+        ![teraterm2](./image/teraterm2.png)
       5. Complete SSH connection.
-        ![teraterm3](/RaspiTutorial/image/teraterm3.png)
+        ![teraterm3](./image/teraterm3.png)
     - for Mac
       1. Open LXTerminal on the task bar.
       2. Enter `ifconfig` and check the IP address of [inet addr] of [eth0].

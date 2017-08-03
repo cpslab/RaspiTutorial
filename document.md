@@ -87,7 +87,7 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
 ### Sign up ThingSpeak
 1. Open sign up page from ThingSpeak's homepage.
 <https://thingspeak.com/users/sign_up>
- ![sign_up](./image/ThingSpeak.png)
+ ![sign_up](./image/Thingspeak.png)
 2. Follow the instructions to create an account.
 
 ### Send sensor data to ThingSpeak.

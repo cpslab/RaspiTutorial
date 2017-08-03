@@ -24,7 +24,7 @@ etc.
 ## Python Tutorial
 1. Open Python Shell
 [Menu]→[Programming]→[Python3(IDLE)]
-2. Writing a code.
+2. Write a code.
   ![shell](./image/shell.png)
 
 ## Let's light the LED
@@ -32,12 +32,13 @@ etc.
 bread board, 50Ω Resistor, LED, Jumper wire
   1. Connect as shown.
   ![pin_asign](./image/gpio.png)
-  ↑Raspberry Pi3's pin assignment
+  ↑Raspberry Pi3's pin assignment.
   This time connect to GPIO5 and GND.
   ![LED](./image/LED.png)
   ※The longer of the LED's legs is + (plus).
 
-  2. Open Python(IDLE) on raspberry pi. [File] → [New File]
+  2. Open Python3 IDLE [Menu]→[Programming]→[Python3(IDLE)]→[File]→[New File]
+
   3. Write the following code.
           import RPi.GPIO as GPIO
           import time
@@ -72,9 +73,7 @@ By changing the value by raising or lowering the Humidity bar, how the LEDs shin
 
 ## Obtaining values of sensor data
 As an example, let's get the value of the humidity sensor.
-1. Open Python3 IDLE
-[Menu]→[Programming]→[Python3(IDLE)]→[File]→[New File]
-![humidity2](./image/humidity2.png)
+1. Open Python3 IDLE [Menu]→[Programming]→[Python3(IDLE)]→[File]→[New File]
 2. Writing program. And run the program with [Run]→[Run Module].
 ![humidity2](./image/humidity3.png)
 3. Humidity value is displayed on Shell.
@@ -97,7 +96,7 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
  ![newchannel](./image/new_channel.png)
 3. Open [API Keys] tab. And confirm API key.
  ![apikey](./image/apikey.png)
-4. Open Python3 shell on raspberry pi and open [File] tab → [New file].
+4. Open Python3 IDLE on raspberry pi and open [File] tab → [New file].
 5. Write the following code. Insert the Write API Key confirmed above into the Write_API_KEY below.
         from sense_hat import SenseHat
         import urllib.parse
@@ -125,8 +124,8 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
 6. Set and save the file name.
 7. [Run]　→　[Run Module] or push F5 key.
 8. Confirm Private view on ThingSpeak.
+ You can see that the current humidity is plotted.
  ![result](./image/result.png)
-You can see that the current humidity is plotted.
 
 ## Work
 Let's try other sensor data obtained by Sense Hat.

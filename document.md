@@ -40,6 +40,7 @@ bread board, 50Ω Resistor, LED, Jumper wire
   2. Open Python3 IDLE [Menu]→[Programming]→[Python3(IDLE)]→[File]→[New File]
 
   3. Write the following code.
+
           import RPi.GPIO as GPIO
           import time
 
@@ -98,6 +99,7 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
  ![apikey](./image/apikey.png)
 4. Open Python3 IDLE on raspberry pi and open [File] tab → [New file].
 5. Write the following code. Insert the Write API Key confirmed above into the Write_API_KEY below.
+
         from sense_hat import SenseHat
         import urllib.parse
         import urllib.request

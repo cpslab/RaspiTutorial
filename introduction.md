@@ -25,6 +25,9 @@ Raspberry Pi is single board computer designed for education. This computer has 
 - Connect the mouse and keyboard to the USB port.
 - Connect the LAN cable to the LANport.
 
+## Shutdown or reboot
+Open the menu at the top.(Mark of Raspberry Pi) → select [Shutdown]
+
 ## Initialization
 ### Setting the resolution
 If it is expanded and displayed, it is necessary to change the resolution.

@@ -42,6 +42,10 @@ If it is expanded and displayed, it is necessary to change the resolution.
    hdmi_group=82`
   4. Close setting file.
   5. Enter `reboot`. -->
+### Change from US keyboard setting to JIS keyboard setting
+  1. Menu → [Preferences] → [keyboard and Mouse]. Open Mouse and keyboard Settings.
+  2. Select [keyboard] tab. And push [Keyboard Layout] button. 　
+  3. Country chooses Japan. And Variant chooses Japanese.
 
 ### Setting up SSH connection
   1. Open Raspberry Pi Configuration

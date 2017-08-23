@@ -33,7 +33,8 @@ bread board, 50Ω Resistor, LED, Jumper wire
   1. Connect as shown.
   ![pin_asign](./image/gpio.png)
   ↑Raspberry Pi3's pin assignment.
-  <font color="OrangeRed">※Bread board is the substrate used for prototyping, experimentation, evaluation. An electric signal flows in the direction of the arrow line in the following figure.</font>
+
+    <font color="OrangeRed">※Bread board is the substrate used for prototyping, experimentation, evaluation. An electric signal flows in the direction of the arrow line in the following figure.</font>
   This time connect to GPIO21 and GND.
   ![LED](./image/LED.png)
 

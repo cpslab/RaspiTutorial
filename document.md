@@ -30,28 +30,34 @@ etc.
 ## Let's light the LED
 - Things to prepare
 bread board, 50Ω Resistor, LED, Jumper wire
+
+  ※About BreadBoard
+  Bread board is the substrate used for prototyping, experimentation, evaluation.
+  An electric signal flows in the direction of the arrow line in the following figure.
+  
   1. Connect as shown.
   ![pin_asign](./image/gpio.png)
   ↑Raspberry Pi3's pin assignment.
-  This time connect to GPIO5 and GND.
+  This time connect to GPIO21 and GND.
   ![LED](./image/LED.png)
-  ※The longer of the LED's legs is + (plus).
 
   2. Open Python3 IDLE [Menu]→[Programming]→[Python3(IDLE)]→[File]→[New File]
 
   3. Write the following code.
 
-          import RPi.GPIO as GPIO
-          import time
+  ```
+  import RPi.GPIO as GPIO
+  import time
 
-          GPIO.cleanup()
-          GPIO.setmode(GPIO.BCM)
-          GPIO.setup(5, GPIO.OUT)
-          while True:
-              GPIO.output(5, GPIO.HIGH)
-              time.sleep(1)
-              GPIO.output(5, GPIO.LOW)
-              time.sleep(1)
+  GPIO.cleanup()
+  GPIO.setmode(GPIO.BCM)
+  GPIO.setup(21, GPIO.OUT)
+  while True:
+  GPIO.output(21, GPIO.HIGH)
+  time.sleep(1)
+  GPIO.output(21, GPIO.LOW)
+  time.sleep(1)
+  ```
   4. [Run]→[Run Module] or push F5 key on keyboard.
     ※Warnings may be issued, but if the LEDs are blinking, you can ignore this time.
 
@@ -99,30 +105,31 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
  ![apikey](./image/apikey.png)
 4. Open Python3 IDLE on raspberry pi and open [File] tab → [New file].
 5. Write the following code. Insert the Write API Key confirmed above into the Write_API_KEY below.
+  ```
+  from sense_hat import SenseHat
+  import urllib.parse
+  import urllib.request
+  import time
 
-        from sense_hat import SenseHat
-        import urllib.parse
-        import urllib.request
-        import time
+  sleep = 15 #Send a value every 15 seconds
+  key = "Write_API_KEY" #This White_API_KEY is your API Key
+  sense = SenseHat()
+  def send_data():
+      while True:
+          humidity = sense.get_humidity()
+          params = urllib.parse.urlencode({'Key': key, 'field1': humidity})
+          url = 'https://api.thingspeak.com/update?' + params
+          try:
+              f = urllib.request.urlopen(url)
+          except:
+              print("connection failed")
+          break
 
-        sleep = 15 #Send a value every 15 seconds
-        key = "Write_API_KEY"
-        sense = SenseHat()
-
-        def send_data():
-            while True:
-                humidity = sense.get_humidity()
-                params = urllib.parse.urlencode({'Key': key, 'field1': humidity})
-                url = 'https://api.thingspeak.com/update?' + params
-                try:
-                    f = urllib.request.urlopen(url)
-                except:
-                    print("connection failed")
-                break
-        if __name__ == "__main__":
-            while True:
-                send_data()
-                time.sleep(sleep)
+  if __name__ == "__main__": #two "_"
+      while True:
+          send_data()
+          time.sleep(sleep)
+  ```
 6. Set and save the file name.
 7. [Run]　→　[Run Module] or push F5 key.
 8. Confirm Private view on ThingSpeak.

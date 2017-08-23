@@ -34,8 +34,9 @@ bread board, 50Ω Resistor, LED, Jumper wire
   ![pin_asign](./image/gpio.png)
   ↑Raspberry Pi3's pin assignment.
 
-    <font color="OrangeRed">※Bread board is the substrate used for prototyping, experimentation, evaluation. An electric signal flows in the direction of the arrow line in the following figure.</font>
-  This time connect to GPIO21 and GND.
+    ※Bread board is the substrate used for prototyping, experimentation, evaluation. An electric signal flows in the direction of the arrow line in the following figure.
+
+    This time connect to GPIO21 and GND.
   ![LED](./image/LED.png)
 
   2. Open Python3 IDLE [Menu]→[Programming]→[Python3(IDLE)]→[File]→[New File]

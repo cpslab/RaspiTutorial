@@ -58,7 +58,7 @@ If it is expanded and displayed, it is necessary to change the resolution.
       ping 8.8.8.8
       ```
 
-    ※ The ip address 8.8.8.8 is the google public DNS ip address.
+  ※ The ip address 8.8.8.8 is the google public DNS ip address.
   3. If ping is passed, the following display will appear.
 
       ![ping](./image/ping.png)

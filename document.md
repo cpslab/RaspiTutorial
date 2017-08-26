@@ -24,7 +24,8 @@ etc.
 ## Python Tutorial
 1. Open Python Shell
 [Menu]→[Programming]→[Python3(IDLE)]
-2. Write a code.
+2. Write code  `print("Hello World!")` .
+
   ![shell](./image/shell.png)
 
 ## Let's light the LED
@@ -44,19 +45,20 @@ bread board, 50Ω Resistor, LED, Jumper wire
   3. Write the following code.
 
   ```
-  import RPi.GPIO as GPIO
-  import time
-
-  GPIO.cleanup()
-  GPIO.setmode(GPIO.BCM)
-  GPIO.setup(21, GPIO.OUT)
-  while True:
-  GPIO.output(21, GPIO.HIGH)
-  time.sleep(1)
-  GPIO.output(21, GPIO.LOW)
-  time.sleep(1)
+   1  import RPi.GPIO as GPIO #O isn't zero(0).
+   2  import time
+   3
+   4  GPIO.cleanup()
+   5  GPIO.setmode(GPIO.BCM)
+   6  GPIO.setup(21, GPIO.OUT)
+   7  while True:
+   8    GPIO.output(21, GPIO.HIGH)
+   9    time.sleep(1)
+  10    GPIO.output(21, GPIO.LOW)
+  11    time.sleep(1)
   ```
   4. [Run]→[Run Module] or push F5 key on keyboard.
+
     ※Warnings may be issued, but if the LEDs are blinking, you can ignore this time.
 
 ## Running The Sense Hat Emulator
@@ -80,7 +82,17 @@ By changing the value by raising or lowering the Humidity bar, how the LEDs shin
 As an example, let's get the value of the humidity sensor.
 1. Open Python3 IDLE [Menu]→[Programming]→[Python3(IDLE)]→[File]→[New File]
 2. Writing program. And run the program with [Run]→[Run Module].
-![humidity2](./image/humidity3.png)
+
+  ```
+   1  from sense_hat import SenseHat
+   2  
+   3  sense = SenseHat()
+   4  humidity = sense.get_humidity()
+   5  print("humidity: " humidity)
+  ```
+
+  ![humidity2](./image/humidity3.png)
+
 3. Humidity value is displayed on Shell.
 
 ※Refer to Sense Hat official document for how to get the values of other sensors, so please see.
@@ -104,29 +116,29 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
 4. Open Python3 IDLE on raspberry pi and open [File] tab → [New file].
 5. Write the following code. Insert the Write API Key confirmed above into the Write_API_KEY below.
   ```
-  from sense_hat import SenseHat
-  import urllib.parse
-  import urllib.request
-  import time
-
-  sleep = 15 #Send a value every 15 seconds
-  key = "Write_API_KEY" #This White_API_KEY is your API Key
-  sense = SenseHat()
-  def send_data():
-      while True:
-          humidity = sense.get_humidity()
-          params = urllib.parse.urlencode({'Key': key, 'field1': humidity})
-          url = 'https://api.thingspeak.com/update?' + params
-          try:
-              f = urllib.request.urlopen(url)
-          except:
-              print("connection failed")
-          break
-
-  if __name__ == "__main__": #two "_"
-      while True:
-          send_data()
-          time.sleep(sleep)
+   1  from sense_hat import SenseHat
+   2  import urllib.parse
+   3  import urllib.request
+   4  import time
+   5
+   6  sleep = 7 #Send a value every 7 seconds
+   7  key = "Write_API_KEY" #This White_API_KEY is your API Key
+   8  sense = SenseHat()
+   9  def send_data():
+  10    while True:
+  11      humidity = sense.get_humidity()
+  12      params = urllib.parse.urlencode({'api_key': key, 'field1': humidity})
+  13      url = 'https://api.thingspeak.com/update?' + params
+  14      try:
+  15        f = urllib.request.urlopen(url)
+  16      except:
+  17        print("connection failed")
+  18      break
+  19
+  20  if __name__ == "__main__": #two "_"
+  21    while True:
+  22      send_data()
+  23      time.sleep(sleep)
   ```
 6. Set and save the file name.
 7. [Run]　→　[Run Module] or push F5 key.

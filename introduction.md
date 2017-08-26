@@ -53,12 +53,14 @@ If it is expanded and displayed, it is necessary to change the resolution.
 ### Confirm network connection
   1. Open Terminal in the upper Menu
   2. Enter the following command
-    ```
-    ping 8.8.8.8
-    ```
+
+      ```
+      ping 8.8.8.8
+      ```
+
     ※ The ip address 8.8.8.8 is the google public DNS ip address.
   3. If ping is passed, the following display will appear.
-  
+
       ![ping](./image/ping.png)
   4. Press ctrl + c to stop ping.
 

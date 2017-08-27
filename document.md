@@ -48,14 +48,19 @@ bread board, 50Ω Resistor, LED, Jumper wire
    1  import RPi.GPIO as GPIO #O isn't zero(0).
    2  import time
    3
-   4  GPIO.cleanup()
+   4  pin = 21
    5  GPIO.setmode(GPIO.BCM)
    6  GPIO.setup(21, GPIO.OUT)
-   7  while True:
-   8    GPIO.output(21, GPIO.HIGH)
-   9    time.sleep(1)
-  10    GPIO.output(21, GPIO.LOW)
-  11    time.sleep(1)
+   7   
+   8  try:
+   9    for i in range(10):
+  10      GPIO.output(pin, GPIO.HIGH)
+  11      time.sleep(1)
+  12      GPIO.output(pin, GPIO.LOW)
+  13      time.sleep(1)
+  14
+  15  except KeyboardInterrupt:
+  16    GPIO.clenaup()
   ```
   4. [Run]→[Run Module] or push F5 key on keyboard.
 

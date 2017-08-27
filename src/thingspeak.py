@@ -17,7 +17,7 @@ def send_data():
             print("connection failed")
         break
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     while True:
         send_data()
         time.sleep(sleep)

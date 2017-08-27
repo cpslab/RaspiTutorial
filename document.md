@@ -88,7 +88,7 @@ As an example, let's get the value of the humidity sensor.
    2  
    3  sense = SenseHat()
    4  humidity = sense.get_humidity()
-   5  print("humidity: " humidity)
+   5  print("humidity: %s" % humidity)
   ```
 
   ![humidity2](./image/humidity3.png)

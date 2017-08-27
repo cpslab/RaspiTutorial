@@ -1,11 +1,16 @@
 import RPI.GPIO as GPIO 
 import time
 
-GPIO.cleanup()
+pin = 21
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(21, GPIO.OUT)
-while True:
-    GPIO.output(21, GPIO.HIGH)
+GPIO.setup(pin, GPIO.OUT)
+
+try:
+  for i in range(10):
+    GPIO.output(pin, GPIO.HIGH)
     time.sleep(1)
-    GPIO.output(21, GPIO.LOW)
+    GPIO.output(pin, GPIO.LOW)
     time.sleep(1)
+    
+except KeyboardInterrupt:
+  GPIO.cleanup()

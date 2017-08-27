@@ -64,8 +64,6 @@ bread board, 50Ω Resistor, LED, Jumper wire
   ```
   4. [Run]→[Run Module] or push F5 key on keyboard.
 
-    ※Warnings may be issued, but if the LEDs are blinking, you can ignore this time.
-
 ## Running The Sense Hat Emulator
 1. Open Raspberry Pi Configuration
 [Menu]→[Programming]→[Sense Hat Emulator]

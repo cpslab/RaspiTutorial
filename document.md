@@ -50,7 +50,7 @@ bread board, 50Ω Resistor, LED, Jumper wire
    3
    4  pin = 21
    5  GPIO.setmode(GPIO.BCM)
-   6  GPIO.setup(21, GPIO.OUT)
+   6  GPIO.setup(pin, GPIO.OUT)
    7   
    8  try:
    9    for i in range(10):
@@ -58,7 +58,7 @@ bread board, 50Ω Resistor, LED, Jumper wire
   11      time.sleep(1)
   12      GPIO.output(pin, GPIO.LOW)
   13      time.sleep(1)
-  14  GPIO.cleanup
+  14    GPIO.cleanup()
   15
   16  except KeyboardInterrupt:
   17    GPIO.cleanup()

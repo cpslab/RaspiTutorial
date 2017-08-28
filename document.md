@@ -125,11 +125,11 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
    3  import urllib.request
    4  import time
    5
-   6  sleep = 7 #Send a value every 7 seconds
-   7  key = "Write_API_KEY" #This White_API_KEY is your API Key
+   6  sleep = 15 #Send a value every 15 seconds
+   7  key = "Write_API_KEY" #This Write_API_KEY is your API Key
    8  sense = SenseHat()
-   9  def send_data():
-  10    while True:
+   9
+  10  def send_data():
   11      humidity = sense.get_humidity()
   12      params = urllib.parse.urlencode({'api_key': key, 'field1': humidity})
   13      url = 'https://api.thingspeak.com/update?' + params
@@ -137,12 +137,11 @@ As a similar platform there are Kibana and Milkcocoa. These platforms can accumu
   15        f = urllib.request.urlopen(url)
   16      except:
   17        print("connection failed")
-  18      break
-  19
-  20  if __name__ == "__main__": #two "_"
-  21    while True:
-  22      send_data()
-  23      time.sleep(sleep)
+  18
+  19  if __name__ == "__main__": #two "_"
+  20    while True:
+  21      send_data()
+  22      time.sleep(sleep)
   ```
 6. Set and save the file name.
 7. [Run]　→　[Run Module] or push F5 key.

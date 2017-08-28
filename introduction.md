@@ -45,6 +45,12 @@ If it is expanded and displayed, it is necessary to change the resolution.
    hdmi_group=82`
   4. Close setting file.
   5. Enter `reboot`. -->
+### Setting the timezone
+  1. Open Raspberry Pi Configuration
+[Menu]→[Preference]→[Raspberry Pi Configuration]
+  2. Press [Set Timezone] button of [Localisation] tab.
+  3. Select [Japan] in Area.
+
 ### Change from US keyboard setting to JIS keyboard setting
   1. Menu → [Preferences] → [keyboard and Mouse]. Open Mouse and keyboard Settings.
   2. Select [keyboard] tab. And push [Keyboard Layout] button. 　
@@ -61,7 +67,7 @@ If it is expanded and displayed, it is necessary to change the resolution.
   ※ The ip address 8.8.8.8 is the google public DNS ip address.
   3. If ping is passed, the following display will appear.
     ![ping](./image/ping.png)
-    
+
   4. Press ctrl + c to stop ping.
 
 ### Setting up SSH connection

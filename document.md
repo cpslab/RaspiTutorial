@@ -99,7 +99,7 @@ As an example, let's get the value of the humidity sensor.
 
 3. Humidity value is displayed on Shell.
 
-※Refer to Sense Hat official document for how to get the values of other sensors, so please see.
+※Refer to [Sense Hat official document](https://pythonhosted.org/sense-hat/api/#sense-hat-api-reference) for how to get the values of other sensors, so please see.
 
 ## about ThingSpeak
 ThingSpeak is one of the IoT Platforms.

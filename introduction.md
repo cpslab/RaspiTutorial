@@ -16,7 +16,7 @@ Raspberry Pi is single board computer designed for education. This computer has 
 |price|$25|$35|$35|
 |CPU|single-core 700MHZ|quad-core 900MHz|quad-core 1.2GHz|
 |memory|512MB|1GB|1GB|
-|power consumption|600mA|900mA|7W|
+|power consumption|3W|4.5W|7W|
 
 # Let's start Raspberry Pi
 ## Connection

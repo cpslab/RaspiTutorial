@@ -58,9 +58,10 @@ bread board, 50Ω Resistor, LED, Jumper wire
   11      time.sleep(1)
   12      GPIO.output(pin, GPIO.LOW)
   13      time.sleep(1)
-  14
-  15  except KeyboardInterrupt:
-  16    GPIO.clenaup()
+  14  GPIO.cleanup
+  15
+  16  except KeyboardInterrupt:
+  17    GPIO.cleanup()
   ```
   4. [Run]→[Run Module] or push F5 key on keyboard.
 

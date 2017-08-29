@@ -101,6 +101,39 @@ As an example, let's get the value of the humidity sensor.
 
 ※Refer to [Sense Hat official document](https://pythonhosted.org/sense-hat/api/#sense-hat-api-reference) for how to get the values of other sensors, so please see.
 
+## Let's Light the LED on Sense Hat
+- Blinking one LED
+
+  ```
+  from sense_hat import SenseHat
+  import time
+  
+  sense = SenseHat()
+  sense.clear()
+  
+  for i in range(100):
+    sense.set_pixel( 0, 0, 255, 0, 0)
+    time.sleep(1.0)
+    sense.set_pixel( 0, 0, 0, 0, 0)
+    time.sleep(1.0)
+   
+   ```
+
+- Blinking all LEDs
+  
+  ```
+  from sense_hat import SenseHat
+  import time
+    
+  sense = SenseHat()
+  sense.clear()
+  for x in range(8)
+    for y in range(8)
+      sense.set_pixel( x, y, 255 - int(255 * i / 8), 255, int(255 * j /8))
+      time.sleep(0.3)
+  
+  ```
+
 ## about ThingSpeak
 ThingSpeak is one of the IoT Platforms.
 As a similar platform there are Kibana and Milkcocoa. These platforms can accumulate, analyze, and visualize data.

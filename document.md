@@ -129,7 +129,7 @@ As an example, let's get the value of the humidity sensor.
   sense.clear()
   for x in range(8)
     for y in range(8)
-      sense.set_pixel( x, y, 255 - int(255 * i / 8), 255, int(255 * j /8))
+      sense.set_pixel( x, y, 255 - int(255 * x / 8), 255, int(255 * y /8))
       time.sleep(0.3)
   
   ```

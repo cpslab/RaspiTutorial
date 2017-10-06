@@ -37,14 +37,15 @@ If it is expanded and displayed, it is necessary to change the resolution.
   2. Press [Set Resolution] button in [Resolution] of [System] tab.
   3. Select [Default Preferred monitor settings].
 
-<!-- - Using CLI
+- Using CLI
   1. Open LXTerminal on the task bar.
   2. Enter `vi  /boot/config.txt` and open the resolution setting file.
   3. Set the value of hdmi_group and the value of hdmi_mode.
   `hdmi_mode=2
    hdmi_group=82`
   4. Close setting file.
-  5. Enter `reboot`. -->
+  5. Enter `reboot`.
+
 ### Setting the timezone
   1. Open Raspberry Pi Configuration
 [Menu]→[Preference]→[Raspberry Pi Configuration]
@@ -92,10 +93,10 @@ If it is expanded and displayed, it is necessary to change the resolution.
       5. Enter password(default passphrase is "raspberry")
       6. Complete ssh connection.
 
-<!-- ### Update packages
+### Update packages
   1. Open LXTerminal on the task bar.
   2. Enter `sudo apt-get update`
-  3. Enter `sudo apt-get upgrade -y` -->
+  3. Enter `sudo apt-get upgrade -y`
 
 ### Raspberry Pi official homepage
 <https://www.raspberrypi.org/>
